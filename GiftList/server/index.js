@@ -1,9 +1,11 @@
 const express = require('express');
 const verifyProof = require('../utils/verifyProof');
+const cors = require('cors');
 
 const port = 1225;
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 // TODO: hardcode a merkle root here representing the whole nice list

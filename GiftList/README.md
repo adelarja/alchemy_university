@@ -24,3 +24,11 @@ There are a few files in utils:
 - The `example.js` script shows how we can generate a root, generate a proof and verify that some value is in the root using the proof. Try it out from the top-level folder with `node/example.js`
 - The `MerkleTree.js` should look familiar from the Merkle Tree module! This one has been modified so you should not have to deal with any crypto type conversion. You can import this in your client/server
 - The `verifyProof.js` should also look familiar. This was the last stage in the module. You can use this function to prove a name is in the merkle root, as show in the example.
+
+## Solution
+
+In the `Client` folder you can find the basic solution. It has a hardcoded name and the response is printed in console.
+
+In the `client_with_frontend` folder, there is a react app. Run `npm install` and `npm start`. You can add a name and click the `verify` button. If the name is in the list, you will receive `"You got a toy robot!"`. If not, `"You are not on the list :("`.
+
+The front end solution gives you the posibility to test easily if one name is on the list.
