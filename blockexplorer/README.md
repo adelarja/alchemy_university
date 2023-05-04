@@ -126,3 +126,13 @@ Read more about the above in the [Alchemy SDK Surface docs](https://docs.alchemy
 - What transfers did an address receive this year?
 
 Good luck and have fun!
+
+## Soultion
+
+I added more information about the block, as:
+
+Block hash, block parent hash, block difficulty.
+
+I also added a new React Component called `Transactions.js`. It allows us to pass a transaction hash and returns a pretty printed json string with information about the transaction. For that, `alchemy.core.getTransactionReceipt(transactionHash)` was used.
+
+
