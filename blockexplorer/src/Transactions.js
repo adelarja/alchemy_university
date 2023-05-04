@@ -19,32 +19,6 @@ const settings = {
 //   https://docs.alchemy.com/reference/alchemy-sdk-api-surface-overview#api-surface
 const alchemy = new Alchemy(settings);
 
-function App() {
-  const [blockNumber, setBlockNumber] = useState();
-  const [blockHash, setBlockHash] = useState();
-  const [blockDifficulty, setBlockDifficulty] = useState();
-  const [BlockParentHash, setParentHash] = useState();
-
-  useEffect(() => {
-    async function getBlockNumber() {
-      setBlockNumber(await alchemy.core.getBlockNumber());
-      setBlockHash((await alchemy.core.getBlock(blockNumber)).hash);
-      setBlockDifficulty((await alchemy.core.getBlock(blockNumber)).difficulty);
-      setParentHash((await alchemy.core.getBlock(blockNumber)).parentHash);
-      console.log(await alchemy.core.getBlock(blockNumber));
-    }
-
-    getBlockNumber();
-  });
-
-  return <div>
-  <div className="App">Block Number: {blockNumber}</div>
-  <div className="App">Hash: {blockHash}</div>
-  <div className="App">Parent Hash: {BlockParentHash}</div>
-  <div className="App">Difficulty: {blockDifficulty}</div>
-  </div>
-}
-
 function TransactionInfo() {
   const [blockNumber, setBlockNumber] = useState();
   const [transactionHash, setTransactionHash] = useState("");
@@ -61,15 +35,6 @@ function TransactionInfo() {
   return (
     <div>
       <label>
-        Block Number:
-        <input
-          type="text"
-          value={blockNumber}
-          onChange={(event) => setBlockNumber(event.target.value)}
-        />
-      </label>
-      <br />
-      <label>
         Transaction Hash:
         <input
           type="text"
@@ -85,4 +50,4 @@ function TransactionInfo() {
   );
 }
 
-export default App;
+export default TransactionInfo;
