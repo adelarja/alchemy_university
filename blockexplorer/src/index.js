@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import TransactionInfo from './Transactions';
+import TransactionsList from './TransactionList'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <TransactionInfo />
+    <TransactionsList />
   </React.StrictMode>,
   document.getElementById('root')
 );

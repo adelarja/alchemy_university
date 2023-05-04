@@ -135,4 +135,6 @@ Block hash, block parent hash, block difficulty.
 
 I also added a new React Component called `Transactions.js`. It allows us to pass a transaction hash and returns a pretty printed json string with information about the transaction. For that, `alchemy.core.getTransactionReceipt(transactionHash)` was used.
 
+Finally, I added a `TransactionsList.js` component. It allows us to pass a block hash and get a list of the transaction hashes of that block. It helps if you want to easily find a hash to test the `Transaction.js` component. First you can put a block hash (for example, the last block hash that is showed in the react app) and fin a list of transaction hashes. Then, you can choose one of the transaction hashes and analyze it details with the `Transaction.js` component.
+
 
